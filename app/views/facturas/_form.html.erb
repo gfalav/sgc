@@ -1,0 +1,53 @@
+<%= form_for(@factura) do |f| %>
+  <% if @factura.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@factura.errors.count, "error") %> prohibited this factura from being saved:</h2>
+
+      <ul>
+      <% @factura.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :contrato_id %><br>
+    <%= f.number_field :contrato_id %>
+  </div>
+  <div class="field">
+    <%= f.label :periodo %><br>
+    <%= f.number_field :periodo %>
+  </div>
+  <div class="field">
+    <%= f.label :fdesde %><br>
+    <%= f.date_select :fdesde %>
+  </div>
+  <div class="field">
+    <%= f.label :fhasta %><br>
+    <%= f.date_select :fhasta %>
+  </div>
+  <div class="field">
+    <%= f.label :femision %><br>
+    <%= f.date_select :femision %>
+  </div>
+  <div class="field">
+    <%= f.label :fvcto %><br>
+    <%= f.date_select :fvcto %>
+  </div>
+  <div class="field">
+    <%= f.label :fproxvcto %><br>
+    <%= f.date_select :fproxvcto %>
+  </div>
+  <div class="field">
+    <%= f.label :fupb %><br>
+    <%= f.date_select :fupb %>
+  </div>
+  <div class="field">
+    <%= f.label :nro %><br>
+    <%= f.text_field :nro %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

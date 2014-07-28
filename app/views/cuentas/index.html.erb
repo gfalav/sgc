@@ -1,0 +1,35 @@
+<h1>Listing cuentas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cliente</th>
+      <th>Nombre</th>
+      <th>Direccion</th>
+      <th>Tpago</th>
+      <th>Timpagado</th>
+      <th>Tvencimiento</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cuentas.each do |cuenta| %>
+      <tr>
+        <td><%= cuenta.cliente_id %></td>
+        <td><%= cuenta.nombre %></td>
+        <td><%= cuenta.direccion_id %></td>
+        <td><%= cuenta.tpago_id %></td>
+        <td><%= cuenta.timpagado_id %></td>
+        <td><%= cuenta.tvencimiento_id %></td>
+        <td><%= link_to 'Show', cuenta %></td>
+        <td><%= link_to 'Edit', edit_cuenta_path(cuenta) %></td>
+        <td><%= link_to 'Destroy', cuenta, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cuenta', new_cuenta_path %>

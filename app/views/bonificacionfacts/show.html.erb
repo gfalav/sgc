@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bonificacion:</strong>
+  <%= @bonificacionfact.bonificacion_id %>
+</p>
+
+<p>
+  <strong>Factura:</strong>
+  <%= @bonificacionfact.factura_id %>
+</p>
+
+<p>
+  <strong>Edesal:</strong>
+  <%= @bonificacionfact.edesal_id %>
+</p>
+
+<p>
+  <strong>Linea:</strong>
+  <%= @bonificacionfact.linea %>
+</p>
+
+<p>
+  <strong>Porcentaje:</strong>
+  <%= @bonificacionfact.porcentaje %>
+</p>
+
+<p>
+  <strong>Fdesde:</strong>
+  <%= @bonificacionfact.fdesde %>
+</p>
+
+<p>
+  <strong>Fhasta:</strong>
+  <%= @bonificacionfact.fhasta %>
+</p>
+
+<%= link_to 'Edit', edit_bonificacionfact_path(@bonificacionfact) %> |
+<%= link_to 'Back', bonificacionfacts_path %>

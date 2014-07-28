@@ -1,0 +1,45 @@
+<%= form_for(@suministro) do |f| %>
+  <% if @suministro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@suministro.errors.count, "error") %> prohibited this suministro from being saved:</h2>
+
+      <ul>
+      <% @suministro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :edesal_id %><br>
+    <%= f.number_field :edesal_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tmedicion_id %><br>
+    <%= f.number_field :tmedicion_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tconexion_id %><br>
+    <%= f.number_field :tconexion_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ttension_id %><br>
+    <%= f.number_field :ttension_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tfase_id %><br>
+    <%= f.number_field :tfase_id %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion_id %><br>
+    <%= f.number_field :direccion_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

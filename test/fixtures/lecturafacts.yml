@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lectura_id: 1
+  factura_id: 1
+  medidor_id: 1
+  tlectura_id: 1
+  flectura: 2014-07-27
+  tconsumo_id: 1
+  lectura: 9.99
+  ctelect: 9.99
+  consumo: 9.99
+
+two:
+  lectura_id: 1
+  factura_id: 1
+  medidor_id: 1
+  tlectura_id: 1
+  flectura: 2014-07-27
+  tconsumo_id: 1
+  lectura: 9.99
+  ctelect: 9.99
+  consumo: 9.99

@@ -1,0 +1,53 @@
+<%= form_for(@edesal) do |f| %>
+  <% if @edesal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@edesal.errors.count, "error") %> prohibited this edesal from being saved:</h2>
+
+      <ul>
+      <% @edesal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :contrato_id %><br>
+    <%= f.number_field :contrato_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tarifa_id %><br>
+    <%= f.text_field :tarifa_id %>
+  </div>
+  <div class="field">
+    <%= f.label :potvigente %><br>
+    <%= f.number_field :potvigente %>
+  </div>
+  <div class="field">
+    <%= f.label :fpotvigente %><br>
+    <%= f.date_select :fpotvigente %>
+  </div>
+  <div class="field">
+    <%= f.label :potoriginal %><br>
+    <%= f.number_field :potoriginal %>
+  </div>
+  <div class="field">
+    <%= f.label :fpotoriginal %><br>
+    <%= f.date_select :fpotoriginal %>
+  </div>
+  <div class="field">
+    <%= f.label :fdetectbadcosfi %><br>
+    <%= f.date_select :fdetectbadcosfi %>
+  </div>
+  <div class="field">
+    <%= f.label :csmofijo %><br>
+    <%= f.number_field :csmofijo %>
+  </div>
+  <div class="field">
+    <%= f.label :eservicio %><br>
+    <%= f.number_field :eservicio %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,54 @@
 Rails.application.routes.draw do
+  resources :bonificacionfacts
+
+  resources :otrocargofacts
+
+  resources :lecturafacts
+
+  resources :edesalfacts
+
+  resources :contratofacts
+
+  resources :bonificacions
+
+  resources :otrocargos
+
+  resources :lineas
+
+  resources :facturas
+
+  resources :lecturas
+
+  resources :medidors
+
+  resources :suministros
+
+  resources :edesals
+
+  resources :contratos
+
+  resources :cuentas
+
+  resources :clientes
+
+  resources :enumerados
+
+  resources :direccions
+
+  resources :calles
+
+  resources :barrios
+
+  resources :localidads
+
+  resources :municipios
+
+  resources :departamentos
+
+  resources :provincias
+
+  resources :paises
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

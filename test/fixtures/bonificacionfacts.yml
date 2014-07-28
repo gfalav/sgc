@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bonificacion_id: 1
+  factura_id: 1
+  edesal_id: 1
+  linea: 1
+  porcentaje: 9.99
+  fdesde: 2014-07-27
+  fhasta: 2014-07-27
+
+two:
+  bonificacion_id: 1
+  factura_id: 1
+  edesal_id: 1
+  linea: 1
+  porcentaje: 9.99
+  fdesde: 2014-07-27
+  fhasta: 2014-07-27

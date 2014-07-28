@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cliente_id: 1
+  nombre: MyString
+  direccion_id: 1
+  tpago_id: 1
+  timpagado_id: 1
+  tvencimiento_id: 1
+
+two:
+  cliente_id: 1
+  nombre: MyString
+  direccion_id: 1
+  tpago_id: 1
+  timpagado_id: 1
+  tvencimiento_id: 1

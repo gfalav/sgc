@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contrato_id: 1
+  factura_id: 1
+  cuenta_id: 1
+  nombre: MyString
+  tcuit_id: 1
+  iibb: MyString
+  tiibb_id: 1
+  tperfact_id: 1
+  econtrato_id: 1
+
+two:
+  contrato_id: 1
+  factura_id: 1
+  cuenta_id: 1
+  nombre: MyString
+  tcuit_id: 1
+  iibb: MyString
+  tiibb_id: 1
+  tperfact_id: 1
+  econtrato_id: 1

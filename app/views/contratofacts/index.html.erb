@@ -1,0 +1,41 @@
+<h1>Listing contratofacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Contrato</th>
+      <th>Factura</th>
+      <th>Cuenta</th>
+      <th>Nombre</th>
+      <th>Tcuit</th>
+      <th>Iibb</th>
+      <th>Tiibb</th>
+      <th>Tperfact</th>
+      <th>Econtrato</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contratofacts.each do |contratofact| %>
+      <tr>
+        <td><%= contratofact.contrato_id %></td>
+        <td><%= contratofact.factura_id %></td>
+        <td><%= contratofact.cuenta_id %></td>
+        <td><%= contratofact.nombre %></td>
+        <td><%= contratofact.tcuit_id %></td>
+        <td><%= contratofact.iibb %></td>
+        <td><%= contratofact.tiibb_id %></td>
+        <td><%= contratofact.tperfact_id %></td>
+        <td><%= contratofact.econtrato_id %></td>
+        <td><%= link_to 'Show', contratofact %></td>
+        <td><%= link_to 'Edit', edit_contratofact_path(contratofact) %></td>
+        <td><%= link_to 'Destroy', contratofact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contratofact', new_contratofact_path %>

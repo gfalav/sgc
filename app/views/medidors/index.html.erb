@@ -1,0 +1,45 @@
+<h1>Listing medidors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Suministro</th>
+      <th>Tmedidor</th>
+      <th>Nromedidor</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Corriente</th>
+      <th>Ttension</th>
+      <th>Tfase</th>
+      <th>Cteapa</th>
+      <th>Ffabric</th>
+      <th>Cperds</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @medidors.each do |medidor| %>
+      <tr>
+        <td><%= medidor.suministro_id %></td>
+        <td><%= medidor.tmedidor_id %></td>
+        <td><%= medidor.nromedidor %></td>
+        <td><%= medidor.marca_id %></td>
+        <td><%= medidor.modelo %></td>
+        <td><%= medidor.corriente %></td>
+        <td><%= medidor.ttension_id %></td>
+        <td><%= medidor.tfase_id %></td>
+        <td><%= medidor.cteapa %></td>
+        <td><%= medidor.ffabric %></td>
+        <td><%= medidor.cperds %></td>
+        <td><%= link_to 'Show', medidor %></td>
+        <td><%= link_to 'Edit', edit_medidor_path(medidor) %></td>
+        <td><%= link_to 'Destroy', medidor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Medidor', new_medidor_path %>

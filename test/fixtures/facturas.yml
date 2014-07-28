@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contrato_id: 1
+  periodo: 1
+  fdesde: 2014-07-27
+  fhasta: 2014-07-27
+  femision: 2014-07-27
+  fvcto: 2014-07-27
+  fproxvcto: 2014-07-27
+  fupb: 2014-07-27
+  nro: MyString
+
+two:
+  contrato_id: 1
+  periodo: 1
+  fdesde: 2014-07-27
+  fhasta: 2014-07-27
+  femision: 2014-07-27
+  fvcto: 2014-07-27
+  fproxvcto: 2014-07-27
+  fupb: 2014-07-27
+  nro: MyString

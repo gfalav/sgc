@@ -1,0 +1,61 @@
+<%= form_for(@medidor) do |f| %>
+  <% if @medidor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@medidor.errors.count, "error") %> prohibited this medidor from being saved:</h2>
+
+      <ul>
+      <% @medidor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :suministro_id %><br>
+    <%= f.number_field :suministro_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tmedidor_id %><br>
+    <%= f.number_field :tmedidor_id %>
+  </div>
+  <div class="field">
+    <%= f.label :nromedidor %><br>
+    <%= f.text_field :nromedidor %>
+  </div>
+  <div class="field">
+    <%= f.label :marca_id %><br>
+    <%= f.number_field :marca_id %>
+  </div>
+  <div class="field">
+    <%= f.label :modelo %><br>
+    <%= f.text_field :modelo %>
+  </div>
+  <div class="field">
+    <%= f.label :corriente %><br>
+    <%= f.text_field :corriente %>
+  </div>
+  <div class="field">
+    <%= f.label :ttension_id %><br>
+    <%= f.number_field :ttension_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tfase_id %><br>
+    <%= f.number_field :tfase_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cteapa %><br>
+    <%= f.text_field :cteapa %>
+  </div>
+  <div class="field">
+    <%= f.label :ffabric %><br>
+    <%= f.date_select :ffabric %>
+  </div>
+  <div class="field">
+    <%= f.label :cperds %><br>
+    <%= f.text_field :cperds %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

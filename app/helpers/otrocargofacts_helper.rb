@@ -1,0 +1,2 @@
+module OtrocargofactsHelper
+end

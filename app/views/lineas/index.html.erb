@@ -1,0 +1,31 @@
+<h1>Listing lineas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Factura</th>
+      <th>Concepto</th>
+      <th>Importe</th>
+      <th>Leyenda</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lineas.each do |linea| %>
+      <tr>
+        <td><%= linea.factura_id %></td>
+        <td><%= linea.concepto_id %></td>
+        <td><%= linea.importe %></td>
+        <td><%= linea.leyenda %></td>
+        <td><%= link_to 'Show', linea %></td>
+        <td><%= link_to 'Edit', edit_linea_path(linea) %></td>
+        <td><%= link_to 'Destroy', linea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Linea', new_linea_path %>

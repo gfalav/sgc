@@ -1,0 +1,41 @@
+<h1>Listing edesals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Contrato</th>
+      <th>Tarifa</th>
+      <th>Potvigente</th>
+      <th>Fpotvigente</th>
+      <th>Potoriginal</th>
+      <th>Fpotoriginal</th>
+      <th>Fdetectbadcosfi</th>
+      <th>Csmofijo</th>
+      <th>Eservicio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @edesals.each do |edesal| %>
+      <tr>
+        <td><%= edesal.contrato_id %></td>
+        <td><%= edesal.tarifa_id %></td>
+        <td><%= edesal.potvigente %></td>
+        <td><%= edesal.fpotvigente %></td>
+        <td><%= edesal.potoriginal %></td>
+        <td><%= edesal.fpotoriginal %></td>
+        <td><%= edesal.fdetectbadcosfi %></td>
+        <td><%= edesal.csmofijo %></td>
+        <td><%= edesal.eservicio %></td>
+        <td><%= link_to 'Show', edesal %></td>
+        <td><%= link_to 'Edit', edit_edesal_path(edesal) %></td>
+        <td><%= link_to 'Destroy', edesal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Edesal', new_edesal_path %>

@@ -1,0 +1,33 @@
+<h1>Listing bonificacions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Edesal</th>
+      <th>Linea</th>
+      <th>Porcentaje</th>
+      <th>Fdesde</th>
+      <th>Fhasta</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bonificacions.each do |bonificacion| %>
+      <tr>
+        <td><%= bonificacion.edesal_id %></td>
+        <td><%= bonificacion.linea %></td>
+        <td><%= bonificacion.porcentaje %></td>
+        <td><%= bonificacion.fdesde %></td>
+        <td><%= bonificacion.fhasta %></td>
+        <td><%= link_to 'Show', bonificacion %></td>
+        <td><%= link_to 'Edit', edit_bonificacion_path(bonificacion) %></td>
+        <td><%= link_to 'Destroy', bonificacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bonificacion', new_bonificacion_path %>

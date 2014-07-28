@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  edesal_id: 1
+  factura_id: 1
+  contratofact_id: 1
+  tarifa_id: MyString
+  potvigente: 1
+  fpotvigente: 2014-07-27
+  potoriginal: 1
+  fpotoriginal: 2014-07-27
+  fdetectbadcosfi: 2014-07-27
+  csmofijo: 1
+  eservicio: 1
+
+two:
+  edesal_id: 1
+  factura_id: 1
+  contratofact_id: 1
+  tarifa_id: MyString
+  potvigente: 1
+  fpotvigente: 2014-07-27
+  potoriginal: 1
+  fpotoriginal: 2014-07-27
+  fdetectbadcosfi: 2014-07-27
+  csmofijo: 1
+  eservicio: 1

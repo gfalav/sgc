@@ -1,0 +1,33 @@
+<h1>Listing otrocargos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Edesal</th>
+      <th>Concepto</th>
+      <th>Importe</th>
+      <th>Ffactura</th>
+      <th>Ecargo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @otrocargos.each do |otrocargo| %>
+      <tr>
+        <td><%= otrocargo.edesal_id %></td>
+        <td><%= otrocargo.concepto_id %></td>
+        <td><%= otrocargo.importe %></td>
+        <td><%= otrocargo.ffactura %></td>
+        <td><%= otrocargo.ecargo_id %></td>
+        <td><%= link_to 'Show', otrocargo %></td>
+        <td><%= link_to 'Edit', edit_otrocargo_path(otrocargo) %></td>
+        <td><%= link_to 'Destroy', otrocargo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Otrocargo', new_otrocargo_path %>

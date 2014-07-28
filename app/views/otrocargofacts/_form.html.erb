@@ -1,0 +1,45 @@
+<%= form_for(@otrocargofact) do |f| %>
+  <% if @otrocargofact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@otrocargofact.errors.count, "error") %> prohibited this otrocargofact from being saved:</h2>
+
+      <ul>
+      <% @otrocargofact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :otrocargo_id %><br>
+    <%= f.number_field :otrocargo_id %>
+  </div>
+  <div class="field">
+    <%= f.label :factura_id %><br>
+    <%= f.number_field :factura_id %>
+  </div>
+  <div class="field">
+    <%= f.label :edesal_id %><br>
+    <%= f.number_field :edesal_id %>
+  </div>
+  <div class="field">
+    <%= f.label :concepto_id %><br>
+    <%= f.number_field :concepto_id %>
+  </div>
+  <div class="field">
+    <%= f.label :importe %><br>
+    <%= f.text_field :importe %>
+  </div>
+  <div class="field">
+    <%= f.label :ffactura %><br>
+    <%= f.date_select :ffactura %>
+  </div>
+  <div class="field">
+    <%= f.label :ecargo_id %><br>
+    <%= f.number_field :ecargo_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
