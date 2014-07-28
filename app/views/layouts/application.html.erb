@@ -8,6 +8,65 @@
 </head>
 <body>
 
+	<div id="mainbar">
+		<div id="mainmenu">
+			<div id="mmcontainer">
+				<ul>
+					<li><%= link_to "CLIENTES" %></li>
+					<li><%= link_to "CICLO" %></li>
+					<li><%= link_to "S TECNICO" %></li>
+					<li><%= link_to "TAREA" %></li>
+					<li><%= link_to "HITO" %></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="middlebar">
+		</div>
+
+		<div id="recmenu">
+			<div id="reccontainer">
+				<ul>
+					<li><%= link_to "USUARIO" %></li>
+					<li><%= link_to "MENSAJES" %></li>
+					<li><%= link_to "SEGURIDAD" %></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="projectbar">
+		<div id="textbar">
+			<% if @linea1 %>
+				<h3 class="linea1"><%= @linea1 %></h3>
+			<% else %>
+				<h3 style="padding: 20px 20px 20px 80px;">Gestión de Proyectos Online</h3>			
+			<% end %>
+			<% if @linea2 %>
+				<h4 class="linea2"><%= @linea2 %></h4>
+			<% end %>
+		</div>
+		<div id="userimage">
+			<% if session[:user_logged] %>
+				<%= image_tag(Rails.root.join('app', 'assets', 'images', 'users', @user_logged.photofile),:size=>"50x50") %>
+			<% end %>
+		</div>
+		<div id="userdata">
+			<% if session[:user_logged] %>
+				<ul>
+					<li><%= link_to(@user_logged.nombre) %><br></li>
+					<li><%= link_to(@user_logged.role) %><br></li>
+					<li><%= link_to("LOGOUT", logout_url) %></li>
+				</ul>
+			<% else %>
+				<ul>
+					<li id="login_link"><%= link_to("LOGIN") %></li>
+				</ul>
+			<% end %>
+		</div>
+	</div>
+
+
 <%= yield %>
 
 </body>
